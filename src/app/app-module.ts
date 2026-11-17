@@ -4,11 +4,15 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { MenuComponent } from './components/menu-component/menu-component';
 import { HomeDepartamentosComponent } from './components/home-departamentos-component/home-departamentos-component';
+import { FormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
+import { ServiceDepartamentos } from './services/service.departamentos';
+import { CreateDepartamentoComponent } from './components/create-departamento-component/create-departamento-component';
 
 @NgModule({
-  declarations: [App, MenuComponent, HomeDepartamentosComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [provideBrowserGlobalErrorListeners()],
+  declarations: [App, MenuComponent, HomeDepartamentosComponent, CreateDepartamentoComponent],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [provideBrowserGlobalErrorListeners(), provideHttpClient(), ServiceDepartamentos],
   bootstrap: [App],
 })
 export class AppModule {}
