@@ -1,0 +1,9 @@
+<p>delete-form-component works!</p>
+<form #form="ngForm">
+    Id departamento a eliminar:
+    <input type="number" #cajaid name="cajaid" class="form-control"/>
+    <button class="btn btn-danger" (click)="eliminarDepartamento()">
+        Eliminar
+    </button>
+</form>
+<h2 style="color:red">{{mensaje}}</h2>

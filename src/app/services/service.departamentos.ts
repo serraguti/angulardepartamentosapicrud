@@ -26,4 +26,12 @@ export class ServiceDepartamentos {
             this._http.post(url, departamento, {headers: header})
         )
     }
+
+    async deleteDepartamento(id: number): Promise<any> {
+        let request = "api/departamentos/" + id;
+        let url = environment.apiejemplos + request;
+        return firstValueFrom(
+            this._http.delete(url)
+        )
+    }
 }

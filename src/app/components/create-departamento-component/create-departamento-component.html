@@ -1,1 +1,13 @@
 <p>create-departamento-component works!</p>
+<form #form="ngForm">
+    Id departamento:
+    <input type="number" #cajaid name="cajaid" class="form-control"/>
+    Nombre:
+    <input type="text" #cajanombre name="cajanombre" class="form-control"/>
+    Localidad: 
+    <input type="text" name="cajalocalidad" #cajalocalidad class="form-control"/>
+    <button (click)="insertarDepartamento()" class="btn btn-success">
+        Insertar
+    </button>
+</form>
+<h2 style="color:blue">{{mensaje}}</h2>
